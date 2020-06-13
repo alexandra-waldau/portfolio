@@ -41,11 +41,6 @@ h2 {
     margin-bottom: 25px;
 }
 
-.arrow {
-    width: 20px;
-    height: 20px;
-}
-
 /*Header*/
 
 .header-container {
@@ -268,4 +263,107 @@ h2 {
     height: min-content;
 }
 
+/*Mobile footer*/
+
+.footer-container {
+    display: flex;
+    background-color: #0C0C12;
+    opacity: 83%;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.nav-footer {
+    font-family: 'Mukta', sans-serif;
+    font-size: 4.5vw;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.footer-item {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.description {
+    color: #EEEAEA;
+    font-family: 'Mukta', sans-serif;
+    font-size: 4.5vw;
+    list-style: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.contact p {
+    color: #EEEAEA;
+    padding-left: 10px;
+}
+
+.contact img {
+    align-self: center;
+    height: 30px;
+    width: 30px;
+}
+
+.nav-footer a {
+    text-decoration: none;
+    color: #EEEAEA;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/*Desktop footer*/
+
+@media screen and (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-left: 15%;
+        padding-right: 15%;
+        align-items: flex-start;
+    }
+
+    .nav-footer {
+        font-size: 1.4vw;
+        order: 2;
+        margin-top: 30px;
+    }
+
+    .description {
+        font-size: 1.4vw;
+        order: 1;
+    }
+
+    .contact p {
+        font-size: 1.4vw;
+    }
+
+    .contact img {
+        height: 20px;
+        width: 20px;
+    }
+
+    .contact {
+        align-items: flex-start;
+    }
+
+    .contact-information {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        order: 3;
+    }
+
+    .social {
+        display: none;
+    }
+
+}
 
