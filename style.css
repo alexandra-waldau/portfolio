@@ -16,6 +16,8 @@ h1 {
     font-weight: bold;
     font-size: 5vw;
     text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 h2 {
@@ -35,10 +37,19 @@ h2 {
 .headline {
     background-color: #ffffff;
     margin: auto;
-    width: 25%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: fit-content;
+    padding: 10px 15px;
     margin-bottom: 25px;
+}
+
+button {
+    background-color: #AC0F3E;
+    border-radius: 5px;
+    width: 115px;
+    height: 40px;
+    /*center button*/
+    display: block;
+    margin: 0 auto;
 }
 
 /*Header*/
@@ -188,6 +199,10 @@ h2 {
 
 /*Mobile skills section*/
 
+#skills {
+    background-color: #EEEAEA;
+}
+
 .skills-container {
     background-color: #EEEAEA;
     padding-left: 25px;
@@ -239,6 +254,33 @@ h2 {
 
 .wrapper {
     position: relative;
+}
+
+/*Mobile career section*/
+
+#career {
+    background-color: #EEEAEA;
+}
+
+.swipe {
+    display: flex;
+    flex-direction: row;
+}
+
+.swipe.left {
+    display: none;
+}
+
+.arrow {
+    height: 25px;
+    width: 25px;
+}
+
+button a {
+    color: #EEEAEA;
+    text-decoration: none;
+    font-family: 'Mukta', sans-serif;
+    font-size: 3.5vw;
 }
 
 /*Mobile tools section*/
