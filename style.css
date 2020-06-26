@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+body {
+    background-color: #EEEAEA;
+}
+
 p {
     color: #0C0C12;
     font-family: 'Mukta', sans-serif;
@@ -61,6 +65,19 @@ button {
     border: 0px;
 }
 
+/*Desktop settings */
+
+@media screen and (min-width: 768px) {
+
+    h3 {
+        font-size: 1.7vw;
+    }
+
+    h1 {
+        font-size: 2.2vw;
+    }
+}
+
 /*Header*/
 
 .header-container {
@@ -72,7 +89,7 @@ button {
 
 /*Mobile menu*/
 
-.main-nav {
+.navigation {
     padding-top: 5px;
 }
 
@@ -115,7 +132,7 @@ button {
     text-decoration: none;
 }
 
-.main-nav.active {
+.navigation.active {
     background-image:  linear-gradient(rgba(12, 12, 18, 0.7), rgba(12, 12, 18, 0.7));
 }
 
@@ -126,10 +143,10 @@ button {
 /*Desktop menu*/
 
 @media screen and (min-width: 768px) {
-    .main-nav {
+    .navigation {
         display: flex;
-        justify-content: space-between;
     }
+
     .nav-right {
         display: flex;
         margin-right: 40px;
@@ -167,7 +184,8 @@ button {
 /*Mobile about section*/
 
 .about-1-container {
-    margin: 25px;
+    background-color: #ffffff;
+    padding: 25px;
     height: 150px;
     display: flex;
     flex-direction: row;
@@ -195,7 +213,6 @@ button {
 }
 
 .about-2-container {
-    background-color: #EEEAEA;
     padding: 25px;
 }
 
@@ -208,12 +225,7 @@ button {
 
 /*Mobile skills section*/
 
-#skills {
-    background-color: #EEEAEA;
-}
-
 .skills-container {
-    background-color: #EEEAEA;
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 10px;
@@ -268,7 +280,6 @@ button {
 /*Mobile career section*/
 
 #career {
-    background-color: #EEEAEA;
     padding-bottom: 30px;
 }
 
@@ -289,11 +300,20 @@ button {
 }
 
 /*Timeline*/
+
 .timeline {
-    border-left: 5px dashed #AC0F3E;
-    margin-left: 25px;
-    margin-right: 25px;
+    position: relative;
+    margin: 0 auto;
     margin-top: 40px;
+} 
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    border-left: 5px dashed #AC0F3E;
+    top: 0;
+    bottom: 0;
+    left: 25px;
 }
 
 .event {
@@ -301,26 +321,26 @@ button {
     margin-bottom: 30px;
     padding-left: 20px;
     border-left: 5px solid #AC0F3E;
-    margin-left: -5px;
+    margin-left: 25px;
     display: flex;
 }
 
 .event img {
     height: 30px;
     width: 30px;
-    padding-right: 10px;
 }
 
 .event-container{
     display: flex;
     flex-direction: column;
+    padding-left: 10px;
 }
 
 .event li{
     font-family: 'Mukta', sans-serif;
 }
 
-.timeline.education {
+.education {
     display: none;
 }
 
@@ -332,11 +352,91 @@ button a {
     font-size: 3.5vw;
 }
 
-/*Mobile tools section*/
+/*Desktop career section*/
 
-#tools {
-    background-color: #EEEAEA;
+@media screen and (min-width: 768px) {
+
+    /*Swipe button*/
+    
+    .arrow {
+        display: none;
+    }
+
+    .swipe.left {
+        display: block;
+    }
+
+    .navigation.career {
+        justify-content: space-evenly;
+        padding-left: 20%;
+        padding-right: 13%;
+        margin-top: 20px;
+    }
+
+    /*Timeline*/
+
+    .timeline {
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    .timeline::after {
+        left: 50%;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex :nth-child(1) {order: 2;}
+    .flex :nth-child(2) {order: 4;}
+    .flex :nth-child(3) {order: 5;}
+    .flex :nth-child(4) {order: 1;}
+    .flex :nth-child(5) {order: 3;}
+
+    .event {
+        position: relative;
+        margin-left: 0;
+        max-width: 35%;
+        border-style: none;
+    }
+
+    .event::after {
+        content: '';
+        position: absolute;
+        height: 50px;
+        border-right: 5px solid #AC0F3E;
+    }
+
+    .event.work::after {
+        left: 0;
+    }
+
+    .event.education::after {
+        left: 100%;
+    }
+    
+    .education {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: 20px;
+        align-self: flex-end;
+        right: 50%;
+    }
+
+    .work {
+       left: 50%;
+    }
+
+    .ed {
+        align-items: flex-end;
+        padding-right: 10px;
+    }
+
 }
+
+/*Mobile tools section*/
 
 .tools-container {
     display: flex;
@@ -352,6 +452,16 @@ button a {
     flex-shrink: 0;
     width: 80vw;
     height: min-content;
+}
+
+/*Desktop tools section*/
+
+@media screen and (min-width: 768px) {
+
+    .tool {
+        flex-shrink: 1;
+        width: 20vw;
+    }
 }
 
 /*Mobile footer*/
@@ -413,11 +523,11 @@ button a {
 /*Desktop footer*/
 
 @media screen and (min-width: 768px) {
+
     .footer-container {
         flex-direction: row;
         justify-content: space-evenly;
-        padding-left: 15%;
-        padding-right: 15%;
+        padding: 15% 15%;
         align-items: flex-start;
     }
 

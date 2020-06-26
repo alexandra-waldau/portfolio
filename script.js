@@ -23,14 +23,15 @@ swipeRight.addEventListener('click', function() {
     $('.headline.swipe.left').show();
     //substitute display: block with display: flex
     $('.headline.swipe.left').css('display', 'flex');
-    $('.timeline.work-experience').hide();
-    $('.timeline.education').show();
+    $('.work').hide();
+    $('.education').show();
+    $('.education').css('display', 'flex');
 });
 
 swipeLeft.addEventListener('click', function() {
     $('.headline.swipe.right').show();
     $('.headline.swipe.left').hide();
-    $('.timeline.education').hide();
-    $('.timeline.work-experience').show();
+    $('.education').hide();
+    $('.work').show();
 });
 

@@ -12,7 +12,7 @@
 <body>
 <header id="home">
     <div class="header-container">
-        <nav class ="main-nav" id="js-menu-2">
+        <nav class ="navigation" id="js-menu-2">
             <div class="nav-left">
                 <i class="toggle" id="js-toggle"><img src="./icons/icons8-menu.svg" alt="hamburger menu icon"></i>
                 <div class="nav-left-container">
@@ -130,16 +130,18 @@
     </div>
 </section>
 <section id="career">
-    <div class="headline swipe right">
-        <h1>Work Experience</h1>
-        <img class="arrow" id="swipe-right" src="./icons/icons8-chevron-right-26.png" alt="arrow right">
+    <div class="navigation career">
+        <div class="headline swipe left">
+            <img class="arrow" id="swipe-left" src="./icons/icons8-chevron-left-26.png" alt="arrow left">
+            <h1>Education</h1>
+        </div>
+        <div class="headline swipe right">
+            <h1>Work Experience</h1>
+            <img class="arrow" id="swipe-right" src="./icons/icons8-chevron-right-26.png" alt="arrow right">
+        </div>
     </div>
-    <div class="headline swipe left">
-        <img class="arrow" id="swipe-left" src="./icons/icons8-chevron-left-26.png" alt="arrow left">
-        <h1>Education</h1>
-    </div>
-    <div class="timelines">
-        <div class="timeline work-experience">
+    <div class="timeline">
+        <div class="flex">
             <ul class="event work">
                 <img src="./icons/icons8-briefcase-48.png" alt="briefcase icon">
                 <div class="event-container">
@@ -164,11 +166,9 @@
                     <li class="date">2016</li>
                 </div>
             </ul>
-        </div>
-        <div class="timeline education">
             <ul class="event education">
                 <img src="./icons/icons8-university-48.png" alt="university icon">
-                <div class="event-container">
+                <div class="event-container ed">
                     <li><h3>M.Sc. in Software Design</h3></li>
                     <li class="company">IT Univeristy of Copenhagen</li>
                     <li class="date">2019-2021</li>
@@ -176,7 +176,7 @@
             </ul>
             <ul class="event education">
                 <img src="./icons/icons8-university-48.png" alt="university icon">
-                <div class="event-container">
+                <div class="event-container ed">
                     <li><h3>B.A. in Digital Media</h3></li>
                     <li class="company">Leuphana University Lüneburg</li>
                     <li class="date">2014-2019</li>
