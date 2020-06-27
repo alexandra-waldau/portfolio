@@ -14,6 +14,10 @@ p {
     font-size: 4.5vw;
 }
 
+ul {
+    font-family: 'Mukta', sans-serif;
+}
+
 h1 {
     color: #0C0C12;
     font-family: 'Mukta', sans-serif;
@@ -75,6 +79,15 @@ button {
 
     h1 {
         font-size: 2.2vw;
+    }
+
+    p {
+        font-size: 1.5vw;
+        line-height: 35px;
+    }
+
+    .highlight {
+        background-color: #ffffff;
     }
 }
 
@@ -183,18 +196,18 @@ button {
 
 /*Mobile about section*/
 
-.about-1-container {
+.about-mobile-1-container {
     background-color: #ffffff;
     padding: 25px;
     height: 150px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
-.about-1-container p {
+.about-mobile-1-container p {
     padding-left: 25px;
-    align-self: center;
 }
 
 .image-cropper {
@@ -204,7 +217,6 @@ button {
     border-radius: 50%;
     /*hides overflow from img*/
     overflow: hidden;
-    align-self: center;
 }
 
 .image-cropper img {
@@ -212,15 +224,61 @@ button {
     width: 100%;
 }
 
-.about-2-container {
+.about-mobile-2-container {
     padding: 25px;
 }
 
-.about-2-container ul{
-    font-family: 'Mukta', sans-serif;
+.about-mobile-2-container ul{
     line-height: 30px;
     font-size: 4.5vw;
     padding-left: 25px;
+}
+
+.about-desktop-container {
+    display: none;
+}
+
+/*Desktop about section*/
+
+@media screen and (min-width: 768px) {
+
+    .about-mobile-1-container {
+        display: none;
+    }
+
+    .about-mobile-2-container {
+        display: none;
+    }
+
+    .about-desktop-container {
+        display: flex;
+        padding: 25px;
+        justify-content: center;
+        height: fit-content;
+        margin: 3% 5% 0;
+    }
+
+    .flex.about {
+        padding: 25px;
+        width: 60%;
+        margin-left: 25px;
+    }
+
+    #intro {
+        font-weight: bold;
+    }
+
+    .image-cropper {
+        border-radius: 0;
+        width: 200px;
+        height: auto;
+        align-self: center;
+        box-shadow: 10px 10px rgba(12, 12, 18, 0.83);
+    }
+
+    .image-cropper img {
+        display: block;
+    }
 }
 
 /*Mobile skills section*/
@@ -389,11 +447,11 @@ button a {
         flex-direction: column;
     }
 
-    .flex :nth-child(1) {order: 2;}
-    .flex :nth-child(2) {order: 4;}
-    .flex :nth-child(3) {order: 5;}
-    .flex :nth-child(4) {order: 1;}
-    .flex :nth-child(5) {order: 3;}
+    .flex.career :nth-child(1) {order: 2;}
+    .flex.career :nth-child(2) {order: 4;}
+    .flex.career :nth-child(3) {order: 5;}
+    .flex.career :nth-child(4) {order: 1;}
+    .flex.career :nth-child(5) {order: 3;}
 
     .event {
         position: relative;
