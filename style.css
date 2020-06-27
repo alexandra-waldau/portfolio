@@ -73,7 +73,7 @@ button {
 
 @media screen and (min-width: 768px) {
 
-    h3 {
+    h2, h3 {
         font-size: 1.7vw;
     }
 
@@ -84,6 +84,10 @@ button {
     p {
         font-size: 1.5vw;
         line-height: 35px;
+    }
+
+    ul {
+        font-size: 1.5vw;
     }
 
     .highlight {
@@ -254,12 +258,15 @@ button {
         display: flex;
         padding: 25px;
         justify-content: center;
+        align-items: center;
         height: fit-content;
         margin: 3% 5% 0;
     }
 
     .flex.about {
         padding: 25px;
+        padding-top: 0;
+        padding-bottom: 0;
         width: 60%;
         margin-left: 25px;
     }
@@ -270,9 +277,8 @@ button {
 
     .image-cropper {
         border-radius: 0;
-        width: 200px;
+        width: 230px;
         height: auto;
-        align-self: center;
         box-shadow: 10px 10px rgba(12, 12, 18, 0.83);
     }
 
@@ -291,7 +297,6 @@ button {
 
 .skill ul {
     list-style: none;
-    font-family: 'Mukta', sans-serif;
     line-height: 25px;
 }
 
@@ -329,10 +334,61 @@ button {
     line-height: 45px;
     font-family: 'Mukta', sans-serif;
     position: absolute;
+    left: 10px;
+    /*display circle*/
+    z-index: 1;
 }
 
 .wrapper {
     position: relative;
+}
+
+/*Desktop skills section*/
+
+@media screen and (min-width: 768px) {
+
+    #skills {
+        margin-top: 40px;
+    }
+    
+    .skills-container {
+        display: flex;
+        justify-content: space-evenly;
+        padding-right: 10px;
+    }
+
+    .skill {
+        min-width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+        margin-right: 15px;
+    }
+
+    .skill.name {
+        margin: 0;
+    }
+
+    .column {
+        padding-right: 0;
+    }
+
+    .skill ul {
+        line-height: 20px;
+    }
+
+    .circle {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    /*hide headline*/
+
+    #skills-headline {
+        display: none;
+    }
 }
 
 /*Mobile career section*/
