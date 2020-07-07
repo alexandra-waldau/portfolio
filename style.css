@@ -647,6 +647,7 @@ button a {
     flex-direction: column;
     align-items: center;
     padding: 50px;
+    position: relative;
 }
 
 .nav-footer {
@@ -676,6 +677,10 @@ button a {
     margin-bottom: 5px;
 }
 
+.contact-information {
+    margin-bottom: 20px;
+}
+
 .contact p {
     color: #EEEAEA;
     padding-left: 10px;
@@ -691,6 +696,17 @@ button a {
     color: #EEEAEA;
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+/*Icons reference*/
+#icon-ref {
+    position: absolute;
+    bottom: 0;
+}
+
+#icon-ref p {
+    color: #EEEAEA;
+    font-size: 10px;
 }
 
 /*Desktop footer*/
@@ -734,6 +750,12 @@ button a {
 
     .social {
         display: none;
+    }
+
+    #icon-ref {
+        position: absolute;
+        bottom: 0;
+        right: 1.5%;
     }
 
 }
