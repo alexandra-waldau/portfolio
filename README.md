@@ -6,7 +6,7 @@ Purpose of the project was to demonstrate the ability to build a static website 
 The finished product is a portfolio website which was built using flexbox and according to the mobile-first approach.
 
 ## Features
-* Responsive design
+* Responsive design using flexbox
 * CV Download
 
 ## Link to site 
