@@ -3,7 +3,7 @@ This project was part of the final assignment for the course 'Frameworks & Archi
 ## About
 Purpose of the project was to demonstrate the ability to build a static website using HTML and CSS and implement responsive design. For the sake of interactivity, some Javascript was added. 
 
-The finished product is a portfolio website which was built according to the mobile-first approach.
+The finished product is a portfolio website which was built using flexbox and according to the mobile-first approach.
 
 ## Features
 * Responsive design
